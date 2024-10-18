@@ -1,5 +1,5 @@
 {
-  "name": "plugin-template",
+  "name": "plugin-emojipicker",
   "scripts": {
     "publish": "gauntlet publish",
     "build": "gauntlet build",
@@ -7,7 +7,8 @@
   },
   "dependencies": {
     "@project-gauntlet/api": "0.10.0",
-    "@project-gauntlet/deno": "0.10.0"
+    "@project-gauntlet/deno": "0.10.0",
+    "unicode-emoji": "^2.5.0"
   },
   "devDependencies": {
     "@project-gauntlet/tools": "0.8.0",

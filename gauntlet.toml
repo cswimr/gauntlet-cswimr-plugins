@@ -1,14 +1,24 @@
 [gauntlet]
-name = 'Template Plugin'
+name = 'Emoji Picker'
 description = """
-Template Plugin Description
+Copy emojis to your clipboard from Gauntlet!
+
+Author: cswimr
+Repository: https://www.coastalcommits.com/cswimr/gauntlet-emojipicker
 """
 
 [[entrypoint]]
-id = 'template-view'
-name = 'Template view'
-path = 'src/template-view.tsx'
-type = 'view'
+id = 'emojipicker'
+name = 'Emoji Picker'
+path = 'src/emojipicker.tsx'
+type = 'inline-view'
 description = """
-Template Plugin Entrypoint Description
+Copy emojis to your clipboard from Gauntlet!
+
+Author: cswimr
+Repository: https://www.coastalcommits.com/cswimr/gauntlet-emojipicker
 """
+
+[permissions]
+main_search_bar = ["read"]
+clipboard = ["write"]
