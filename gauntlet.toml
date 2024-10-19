@@ -1,9 +1,8 @@
 [gauntlet]
-name = 'Emoji Picker'
+name = "cswimr's Gauntlet Plugins"
 description = """
-Copy emojis to your clipboard from Gauntlet!
+Collection of Gauntlet plugins by cswimr
 
-Author: cswimr
 Repository: https://www.coastalcommits.com/cswimr/gauntlet-emojipicker
 """
 
@@ -14,9 +13,6 @@ path = 'src/emojipicker.tsx'
 type = 'inline-view'
 description = """
 Copy emojis to your clipboard from Gauntlet!
-
-Author: cswimr
-Repository: https://www.coastalcommits.com/cswimr/gauntlet-emojipicker
 """
 
 [permissions]

@@ -7,7 +7,7 @@ import * as UnicodeEmoji from "unicode-emoji";
 const denoCore: DenoCore = Deno[Deno.internal].core;
 
 export default function EmojiPicker(props: { text: string }): ReactNode | undefined {
-    const text = props.text;
+    const text = props.text.trim();
 
     if (text.length < 3) {
         return undefined
