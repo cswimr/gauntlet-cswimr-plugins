@@ -4,7 +4,9 @@ on: workflow_dispatch
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    name: Publish plugins to Release branch
+    runs-on: docker
+    container: catthehacker/ubuntu:act-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -15,4 +17,3 @@ jobs:
       - run: git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
       - run: npm ci
       - run: npm run publish
-
