@@ -1,0 +1,20 @@
+[gauntlet]
+name = "cswimr's Gauntlet Plugins"
+description = """
+Collection of Gauntlet plugins by cswimr
+
+Repository: https://www.coastalcommits.com/cswimr/gauntlet-emojipicker
+"""
+
+[[entrypoint]]
+id = 'emojipicker'
+name = 'Emoji Picker'
+path = 'src/emojipicker.tsx'
+type = 'inline-view'
+description = """
+Copy emojis to your clipboard from Gauntlet!
+"""
+
+[permissions]
+main_search_bar = ["read"]
+clipboard = ["write"]
