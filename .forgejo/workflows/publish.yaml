@@ -1,4 +1,4 @@
-name: publish
+name: Publish Plugins to Release Branch
 
 on: workflow_dispatch
 
