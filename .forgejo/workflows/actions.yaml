@@ -12,7 +12,7 @@ jobs:
   build:
     name: Build Plugins
     runs-on: docker
-    container: catthehacker/ubuntu:act-latest
+    container: www.coastalcommits.com/cswimr/actions:yarn
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,7 +28,7 @@ jobs:
   lint:
     name: Lint Plugins
     runs-on: docker
-    container: catthehacker/ubuntu:act-latest
+    container: www.coastalcommits.com/cswimr/actions:yarn
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

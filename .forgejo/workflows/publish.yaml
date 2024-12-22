@@ -6,7 +6,7 @@ jobs:
   publish:
     name: Publish plugins
     runs-on: docker
-    container: catthehacker/ubuntu:act-latest
+    container: www.coastalcommits.com/cswimr/actions:yarn
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -21,12 +21,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+          cache: 'yarn'
       - name: Configure Git
         run: |
           git config --global user.name "${GITHUB_ACTOR}"
           git config --global user.email "${GITHUB_ACTOR}@noreply@coastalcommits.com"
           git remote set-url origin git@www.coastalcommits.com:${{ github.repository }}
       - name: Install dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
       - name: Publish plugins to Release branch
-        run: npm run publish
+        run: yarn publish
