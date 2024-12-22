@@ -2496,7 +2496,7 @@ undici-types@~6.20.0:
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-6.20.0.tgz#8171bf22c1f588d1554d55bf204bc624af388433"
   integrity sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==
 
-unicode-emoji@^2.5.0:
+unicode-emoji@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/unicode-emoji/-/unicode-emoji-2.6.0.tgz#c7921ce5a39a2cbeb348c5aec9e18c6f22927f3e"
   integrity sha512-MUqkJwdIX2Fw/RttfuJArKvDY2NStDylcAGOn5bbhWfBu+KRSILpjM/TMPbuSNp5plAe45ONv8dqmqtiPNmJ7A==

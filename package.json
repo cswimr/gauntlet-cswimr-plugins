@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@project-gauntlet/api": "0.12.0",
-    "unicode-emoji": "^2.5.0",
+    "unicode-emoji": "^2.6.0",
     "which": "^5.0.0"
   },
   "devDependencies": {
