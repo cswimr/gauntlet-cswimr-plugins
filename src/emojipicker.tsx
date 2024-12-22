@@ -1,9 +1,10 @@
 import { Action, ActionPanel, Content, Icons, Inline } from "@project-gauntlet/api/components";
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { Clipboard, showHud } from "@project-gauntlet/api/helpers";
 import * as UnicodeEmoji from "unicode-emoji";
 
-// @ts-expect-error
+// @ts-expect-error gauntlet uses deno and not node
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const denoCore: DenoCore = Deno[Deno.internal].core;
 
 export default function EmojiPicker(props: { text: string }): ReactNode | undefined {

@@ -3,7 +3,9 @@
   "scripts": {
     "publish": "gauntlet publish",
     "build": "gauntlet build",
-    "dev": "gauntlet dev"
+    "dev": "gauntlet dev",
+    "lint": "prettier-eslint \"src/**/*.tsx\"",
+    "lint:write": "yarn lint --write"
   },
   "dependencies": {
     "@project-gauntlet/api": "0.12.0",
@@ -11,10 +13,19 @@
     "which": "^5.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.17.0",
     "@project-gauntlet/tools": "0.9.0",
     "@types/deno": "^2.0.0",
-    "@types/react": "^18.3.18",
+    "@types/react": "^19.0.2",
     "@types/which": "^3.0.4",
-    "typescript": "^5.7.2"
+    "@typescript-eslint/parser": "^8.18.1",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react": "^7.37.2",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "prettier-eslint": "^16.3.0",
+    "prettier-eslint-cli": "^8.0.1",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.1"
   }
 }

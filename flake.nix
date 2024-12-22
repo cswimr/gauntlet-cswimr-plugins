@@ -41,7 +41,7 @@
                 # https://devenv.sh/reference/options/
                 languages.javascript = {
                   enable = true;
-                  npm = {
+                  yarn = {
                     enable = true;
                     install.enable = true;
                   };
