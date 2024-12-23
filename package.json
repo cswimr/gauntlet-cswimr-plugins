@@ -4,8 +4,7 @@
     "publish": "gauntlet publish",
     "build": "gauntlet build",
     "dev": "gauntlet dev",
-    "lint": "prettier-eslint \"src/**/*.tsx\"",
-    "lint:write": "yarn lint --write"
+    "format": "eslint --fix ."
   },
   "dependencies": {
     "@project-gauntlet/api": "0.12.0",
