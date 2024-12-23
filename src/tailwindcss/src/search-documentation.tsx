@@ -1,12 +1,13 @@
 import { List } from "@project-gauntlet/api/components";
 import React, { ReactElement } from "react";
 import documentation from "./documentation/tailwind-css";
-//import { Clipboard } from "@project-gauntlet/api/helpers";
-import { open } from "@opensrc/deno-open";
+import { Clipboard } from "@project-gauntlet/api/helpers";
+//import { open } from "@opensrc/deno-open"; # pending a fix for https://github.com/project-gauntlet/gauntlet/issues/28
 
 export default function SearchDocumentation(): ReactElement {
   const onClick = async (url: string) => {
-    await open(url);
+    //await open(url);
+    await Clipboard.writeText(url);
   };
 
   return (
@@ -26,8 +27,8 @@ export default function SearchDocumentation(): ReactElement {
         <List.Section key={section} title={section}>
           {items.map((item) => (
             <List.Item
-              key={item.url}
-              //icon="tailwind-icon.png"
+              key={item.title}
+              icon={{ asset: "tailwindcss/list-icon.png" }}
               title={item.title}
               onClick={() => onClick(item.url)}
             />
