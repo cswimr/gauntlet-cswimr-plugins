@@ -30,4 +30,4 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Publish plugins to Release branch
-        run: yarn publish
+        run: yarn run publish
