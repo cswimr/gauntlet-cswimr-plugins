@@ -1,10 +1,12 @@
 import { List } from "@project-gauntlet/api/components";
-import React, { ReactElement } from "react";
+import React, { ReactElement, useState } from "react";
 import documentation from "./documentation/tailwind-css";
 import { Clipboard } from "@project-gauntlet/api/helpers";
 //import { open } from "@opensrc/deno-open"; # pending a fix for https://github.com/project-gauntlet/gauntlet/issues/28
 
 export default function SearchDocumentation(): ReactElement {
+  const [searchText, setSearchText] = useState<string | undefined>("");
+
   const onClick = async (url: string) => {
     //await open(url);
     await Clipboard.writeText(url);
@@ -23,18 +25,39 @@ export default function SearchDocumentation(): ReactElement {
     //     </ActionPanel>
     //   }
     >
-      {Object.entries(documentation).map(([section, items]) => (
-        <List.Section key={section} title={section}>
-          {items.map((item) => (
-            <List.Item
-              key={item.title}
-              icon={{ asset: "tailwindcss/list-icon.png" }}
-              title={item.title}
-              onClick={() => onClick(item.url)}
-            />
+      <List.SearchBar
+        placeholder={"Search TailwindCSS Documentation..."}
+        value={searchText}
+        onChange={setSearchText}
+      />
+      {searchText
+        ? // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          Object.entries(documentation).map(([_section, items]) =>
+            items
+              .filter((item: { title: string; url: string }) =>
+                item.title.toLowerCase().includes(searchText.toLowerCase()),
+              )
+              .map((item: { title: string; url: string }) => (
+                <List.Item
+                  key={item.title}
+                  icon={{ asset: "tailwindcss/list-icon.png" }}
+                  title={item.title}
+                  onClick={() => onClick(item.url)}
+                />
+              )),
+          )
+        : Object.entries(documentation).map(([section, items]) => (
+            <List.Section key={section} title={section}>
+              {items.map((item) => (
+                <List.Item
+                  key={item.title}
+                  icon={{ asset: "tailwindcss/list-icon.png" }}
+                  title={item.title}
+                  onClick={() => onClick(item.url)}
+                />
+              ))}
+            </List.Section>
           ))}
-        </List.Section>
-      ))}
     </List>
   );
 }
