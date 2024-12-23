@@ -25,4 +25,4 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build plugins
-        run: yarn build
+        run: yarn run build
