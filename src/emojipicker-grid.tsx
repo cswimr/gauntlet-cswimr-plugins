@@ -65,29 +65,4 @@ export default function EmojiPicker(): ReactNode | undefined {
           ))}
     </Grid>
   );
-
-  // return (
-  //   <Inline
-  //     actions={
-  //       <ActionPanel>
-  //         <Action
-  //           label={`Copy ${emoji.emoji} to clipboard`}
-  //           onAction={async () => {
-  //             console.log(emoji.emoji);
-  //             await Clipboard.writeText(emoji.emoji);
-  //             showHud(`${emoji.emoji} copied to clipboard`);
-  //           }}
-  //         />
-  //       </ActionPanel>
-  //     }
-  //   >
-  //     <Inline.Left>
-  //       <Content.H3>{text}</Content.H3>
-  //     </Inline.Left>
-  //     <Inline.Separator icon={Icons.ArrowRight} />
-  //     <Inline.Right>
-  //       <Content.Paragraph>{emoji.emoji}</Content.Paragraph>
-  //     </Inline.Right>
-  //   </Inline>
-  // );
 }
