@@ -3,7 +3,7 @@ name: Actions
 on:
   push:
     branches:
-      - '*'
+      - main
       - '!gauntlet/release'
   pull_request:
     branches:
