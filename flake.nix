@@ -41,6 +41,7 @@
                 # https://devenv.sh/reference/options/
                 languages.javascript = {
                   enable = true;
+                  corepack.enable = true;
                   yarn = {
                     enable = true;
                     package = pkgs.yarn-berry;
