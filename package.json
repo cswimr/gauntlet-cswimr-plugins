@@ -1,21 +1,31 @@
 {
   "name": "cswimr-gauntlet-plugins",
+  "type": "module",
   "license": "MIT",
   "scripts": {
     "publish": "gauntlet publish",
     "build": "gauntlet build",
     "dev": "gauntlet dev",
-    "format": "eslint --fix ."
+    "format": "eslint --fix .",
+    "generate:css": "yarn dlx tailwindcss -i ./src/tailwindcss/generator/input.css -o ./src/tailwindcss/generator/output.css",
+    "generate:classes": "node ./src/tailwindcss/generator/index.js",
+    "generate": "yarn run generate:css && yarn run generate:classes"
   },
   "dependencies": {
+    "@opensrc/deno-open": "npm:@jsr/opensrc__deno-open@^1.0.0",
     "@project-gauntlet/api": "0.12.0",
+    "color-convert": "^2.0.1",
+    "css": "^3.0.0",
     "fuse": "^0.12.1",
+    "tailwindcss": "^3.4.17",
     "unicode-emoji": "^2.6.0",
     "which": "^5.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@project-gauntlet/tools": "0.9.0",
+    "@types/color-convert": "^2.0.4",
+    "@types/css": "^0.0.38",
     "@types/deno": "^2.0.0",
     "@types/react": "^19.0.2",
     "@types/which": "^3.0.4",

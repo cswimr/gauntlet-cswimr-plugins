@@ -3,8 +3,25 @@ name = "cswimr's Gauntlet Plugins"
 description = """
 Collection of Gauntlet plugins by cswimr
 
-Repository: https://www.coastalcommits.com/cswimr/gauntlet-emojipicker
+Repository: https://www.coastalcommits.com/cswimr/cswimr-gauntlet-plugins
 """
+
+#
+# TailwindCSS
+#
+
+[[entrypoint]]
+id = 'tailwindcss-search-documentation'
+name = 'Search TailwindCSS Documentation'
+path = 'src/tailwindcss/src/search-documentation.tsx'
+type = 'view'
+description = """
+Search TailwindCSS documentation from Gauntlet!
+"""
+
+#
+# Miscellaneous
+#
 
 [[entrypoint]]
 id = 'emojipicker-legacy'
@@ -24,6 +41,12 @@ description = """
 Copy emojis to your clipboard from Gauntlet!
 """
 
+[[supported_system]]
+os = 'linux'
+
 [permissions]
 main_search_bar = ["read"]
 clipboard = ["write"]
+
+[permissions.exec]
+command = ["xdg-open"]
