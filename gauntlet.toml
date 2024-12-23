@@ -15,6 +15,15 @@ description = """
 Copy emojis to your clipboard from Gauntlet!
 """
 
+[[entrypoint]]
+id = 'emojipicker-grid'
+name = 'Emoji Picker (Grid)'
+path = 'src/emojipicker-grid.tsx'
+type = 'view'
+description = """
+Copy emojis to your clipboard from Gauntlet!
+"""
+
 [permissions]
 main_search_bar = ["read"]
 clipboard = ["write"]
