@@ -1,56 +1,89 @@
-import {
-  Action,
-  ActionPanel,
-  Content,
-  Icons,
-  Inline,
-} from "@project-gauntlet/api/components";
-import React, { ReactNode } from "react";
+import { Grid } from "@project-gauntlet/api/components";
+import React, { ReactNode, useState } from "react";
 import { Clipboard, showHud } from "@project-gauntlet/api/helpers";
-import * as UnicodeEmoji from "unicode-emoji";
+import {
+  GroupedBy,
+  BaseEmoji,
+  getEmojis,
+  getEmojisGroupedBy,
+} from "unicode-emoji";
 
 // @ts-expect-error gauntlet uses deno and not node
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const denoCore: DenoCore = Deno[Deno.internal].core;
 
-export default function EmojiPicker(props: {
-  text: string;
-}): ReactNode | undefined {
-  const text = props.text.trim();
+export default function EmojiPicker(): ReactNode | undefined {
+  const [searchText, setSearchText] = useState<string | undefined>("");
 
-  if (text.length < 3) {
-    return undefined;
+  let emojiList: BaseEmoji[] | Record<GroupedBy, BaseEmoji[]>;
+  let isCategory = null;
+  if (searchText) {
+    emojiList = getEmojis().filter((emoji) =>
+      emoji.keywords.some((keyword) => keyword.includes(searchText)),
+    );
+    isCategory = false;
+  } else {
+    emojiList = getEmojisGroupedBy("category");
+    isCategory = true;
   }
 
-  const emoji = UnicodeEmoji.getEmojis().find((emoji) =>
-    emoji.keywords.includes(text),
-  );
-  if (!emoji) {
-    return undefined;
+  let emojiListLength = 0;
+  if (isCategory) {
+    const typedList = emojiList as Record<GroupedBy, BaseEmoji[]>;
+    for (const category in typedList) {
+      emojiListLength += typedList[category as GroupedBy].length;
+    }
+  } else {
+    emojiListLength = (emojiList as BaseEmoji[]).length;
   }
+  console.log(emojiListLength);
 
   return (
-    <Inline
-      actions={
-        <ActionPanel>
-          <Action
-            label={`Copy ${emoji.emoji} to clipboard`}
-            onAction={async () => {
-              console.log(emoji);
-              await Clipboard.writeText(emoji.emoji);
-              showHud(`${emoji.emoji} copied to clipboard`);
-            }}
-          />
-        </ActionPanel>
-      }
-    >
-      <Inline.Left>
-        <Content.H3>{text}</Content.H3>
-      </Inline.Left>
-      <Inline.Separator icon={Icons.ArrowRight} />
-      <Inline.Right>
-        <Content.Paragraph>{emoji.emoji}</Content.Paragraph>
-      </Inline.Right>
-    </Inline>
+    <Grid>
+      <Grid.SearchBar
+        placeholder={"Search for an emoji"}
+        value={searchText}
+        onChange={setSearchText}
+      />
+      {isCategory
+        ? Object.entries(emojiList).map(([category, emojis]) => (
+            <Grid.Section key={category} title={category}>
+              {emojis.map((emoji: BaseEmoji) => (
+                <Grid.Item
+                  key={emoji.emoji}
+                  title={emoji.description}
+                  onClick={async () => {
+                    console.log(emoji);
+                    await Clipboard.writeText(emoji.emoji);
+                    showHud(`${emoji.emoji} copied to clipboard`);
+                  }}
+                >
+                  <Grid.Item.Content>
+                    <Grid.Item.Content.Paragraph>
+                      {emoji.emoji}
+                    </Grid.Item.Content.Paragraph>
+                  </Grid.Item.Content>
+                </Grid.Item>
+              ))}
+            </Grid.Section>
+          ))
+        : (emojiList as BaseEmoji[]).map((emoji: BaseEmoji) => (
+            <Grid.Item
+              key={emoji.emoji}
+              title={emoji.description}
+              onClick={async () => {
+                console.log(emoji);
+                await Clipboard.writeText(emoji.emoji);
+                showHud(`${emoji.emoji} copied to clipboard`);
+              }}
+            >
+              <Grid.Item.Content>
+                <Grid.Item.Content.Paragraph>
+                  {emoji.emoji}
+                </Grid.Item.Content.Paragraph>
+              </Grid.Item.Content>
+            </Grid.Item>
+          ))}
+    </Grid>
   );
 }
