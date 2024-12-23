@@ -36,7 +36,7 @@ export default function EmojiPicker(props: {
           <Action
             label={`Copy ${emoji.emoji} to clipboard`}
             onAction={async () => {
-              console.log(emoji.emoji);
+              console.log(emoji);
               await Clipboard.writeText(emoji.emoji);
               showHud(`${emoji.emoji} copied to clipboard`);
             }}
