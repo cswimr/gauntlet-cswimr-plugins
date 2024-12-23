@@ -1,5 +1,6 @@
 {
   "name": "cswimr-gauntlet-plugins",
+  "license": "MIT",
   "scripts": {
     "publish": "gauntlet publish",
     "build": "gauntlet build",
