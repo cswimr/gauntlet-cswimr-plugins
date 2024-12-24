@@ -29,7 +29,4 @@ const json = css
     };
   });
 
-fs.writeFileSync(
-  path.join(__dirname, "./classes.json"),
-  JSON.stringify(json),
-);
+fs.writeFileSync(path.join(__dirname, "./classes.json"), JSON.stringify(json));
