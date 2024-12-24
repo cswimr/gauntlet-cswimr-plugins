@@ -30,6 +30,6 @@ const json = css
   });
 
 fs.writeFileSync(
-  path.join(__dirname, "../src/classes.json"),
+  path.join(__dirname, "./classes.json"),
   JSON.stringify(json),
 );
