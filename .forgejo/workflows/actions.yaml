@@ -13,16 +13,16 @@ jobs:
   build:
     name: Build Plugins
     runs-on: docker
-    container: www.coastalcommits.com/cswimr/actions:yarn
+    container: www.coastalcommits.com/cswimr/actions:yarn@sha256:34b46b4169ee57aa9007a7244538e50522a451233a9aadd3f4e63c46d0297d82
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build plugins
         run: yarn run build
       - name: Upload build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@ff15f0306b3f739f7b6fd43fb5d26cd321bd4de5 # v3
         with:
           name: plugins-build
           path: dist/
