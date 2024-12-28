@@ -22,6 +22,7 @@ const open = async (url: string) => {
   // Yes, this function uses Deno. Yes, this repository uses Node.js for tooling.
   // Gauntlet runs loaded plugins in a Deno runtime, so this works fine.
   // Hop off Copilot I know this isn't using Node.js APIs
+  console.log("Opening URL:", url);
   const platform = Deno.build.os;
   const cmd = getOpenCommand(platform);
   const process = new Deno.Command(cmd, {
