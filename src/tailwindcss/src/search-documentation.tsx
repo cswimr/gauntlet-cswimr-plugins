@@ -2,14 +2,18 @@ import { List } from "@project-gauntlet/api/components";
 import React, { ReactElement, useState } from "react";
 import documentation from "./documentation/tailwind-css";
 import { Clipboard } from "@project-gauntlet/api/helpers";
-//import { open } from "@opensrc/deno-open"; # pending a fix for https://github.com/project-gauntlet/gauntlet/issues/28
+import open from "../../utils/open-url";
+
+// @ts-expect-error gauntlet uses deno and not node
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const denoCore: DenoCore = Deno[Deno.internal].core;
 
 export default function SearchDocumentation(): ReactElement {
   const [searchText, setSearchText] = useState<string | undefined>("");
 
   const onClick = async (url: string) => {
-    //await open(url);
-    await Clipboard.writeText(url);
+    await open(url);
+    //await Clipboard.writeText(url);
   };
 
   return (

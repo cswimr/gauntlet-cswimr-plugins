@@ -44,9 +44,15 @@ Copy emojis to your clipboard from Gauntlet!
 [[supported_system]]
 os = 'linux'
 
+[[supported_system]]
+os = 'macos'
+
+[[supported_system]]
+os = 'windows'
+
 [permissions]
 main_search_bar = ["read"]
 clipboard = ["write"]
 
 [permissions.exec]
-command = ["xdg-open"]
+command = ["xdg-open", "open", "start", "firefox"]
