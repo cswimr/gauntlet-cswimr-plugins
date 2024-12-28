@@ -27,6 +27,7 @@ const open = async (url: string) => {
   const process = new Deno.Command(cmd, {
     args: [url],
     env: {
+      // https://github.com/project-gauntlet/gauntlet/issues/28
       LD_LIBRARY_PATH: "",
     },
   });
