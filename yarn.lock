@@ -1866,31 +1866,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jsr/std__assert@npm:^0.218.2":
-  version: 0.218.2
-  resolution: "@jsr/std__assert@npm:0.218.2::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fstd__assert%2F0.218.2.tgz"
-  dependencies:
-    "@jsr/std__fmt": "npm:^0.218.2"
-  checksum: 10c0/2d4b79257b6899852bd25b220574bb5a269230828926deb2e2fd43e6ab222e10168088a565fb48847448a01e1ecfe20ac348f316b51669248726926e4efe3bf5
-  languageName: node
-  linkType: hard
-
-"@jsr/std__fmt@npm:^0.218.2":
-  version: 0.218.2
-  resolution: "@jsr/std__fmt@npm:0.218.2::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fstd__fmt%2F0.218.2.tgz"
-  checksum: 10c0/8ec47fe9068c55d0fa15188d3c0bf6249781b6c900e0685d75598f64cc36fdcb464e5f1b0444a9cf34844e747157a4ab48dc45db9666e878a92fa22a74ad6a94
-  languageName: node
-  linkType: hard
-
-"@jsr/std__path@npm:^0.218.2":
-  version: 0.218.2
-  resolution: "@jsr/std__path@npm:0.218.2::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fstd__path%2F0.218.2.tgz"
-  dependencies:
-    "@jsr/std__assert": "npm:^0.218.2"
-  checksum: 10c0/d536b553560ee19014c748fde9f4ebeb448ac80945854ef8db933c9ce622e643794d33736d041674905c6c1d9a10a79b03429aeaac2b232adfd822a4906237c7
-  languageName: node
-  linkType: hard
-
 "@kamilkisiela/fast-url-parser@npm:^1.1.4":
   version: 1.1.4
   resolution: "@kamilkisiela/fast-url-parser@npm:1.1.4"
@@ -1969,15 +1944,6 @@ __metadata:
   dependencies:
     semver: "npm:^7.3.5"
   checksum: 10c0/c90935d5ce670c87b6b14fab04a965a3b8137e585f8b2a6257263bd7f97756dd736cb165bb470e5156a9e718ecd99413dccc54b1138c1a46d6ec7cf325982fe5
-  languageName: node
-  linkType: hard
-
-"@opensrc/deno-open@npm:@jsr/opensrc__deno-open@^1.0.0":
-  version: 1.0.0
-  resolution: "@jsr/opensrc__deno-open@npm:1.0.0::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fopensrc__deno-open%2F1.0.0.tgz"
-  dependencies:
-    "@jsr/std__path": "npm:^0.218.2"
-  checksum: 10c0/c75fbea8bbfcec906215d239d0402b03b6331497ce98951d8f7238acf4cf5813500a9d034765abfe61bc456cd9495b6b5a9b558db0f16ff0019397769a3ac92c
   languageName: node
   linkType: hard
 
@@ -3815,7 +3781,6 @@ __metadata:
   resolution: "cswimr-gauntlet-plugins@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.17.0"
-    "@opensrc/deno-open": "npm:@jsr/opensrc__deno-open@^1.0.0"
     "@project-gauntlet/api": "npm:0.12.0"
     "@project-gauntlet/tools": "npm:0.9.0"
     "@types/color-convert": "npm:^2.0.4"
