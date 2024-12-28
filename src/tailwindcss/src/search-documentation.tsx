@@ -2,7 +2,7 @@ import { List } from "@project-gauntlet/api/components";
 import React, { ReactElement, useState } from "react";
 import documentation from "./documentation/tailwind-css";
 import { Clipboard } from "@project-gauntlet/api/helpers";
-import open from "../../utils/open-url";
+import open from "../../../utils/open-url";
 
 // @ts-expect-error gauntlet uses deno and not node
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
