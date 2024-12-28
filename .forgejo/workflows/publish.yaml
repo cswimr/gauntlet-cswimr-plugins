@@ -6,10 +6,10 @@ jobs:
   publish:
     name: Publish plugins
     runs-on: docker
-    container: www.coastalcommits.com/cswimr/actions:yarn
+    container: www.coastalcommits.com/cswimr/actions:yarn@sha256:34b46b4169ee57aa9007a7244538e50522a451233a9aadd3f4e63c46d0297d82
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - name: Set up SSH key
         uses: actions/ssh-agent@forgejo
         with:
@@ -18,7 +18,7 @@ jobs:
       - name: Add instance URLs to known_hosts
         run: ssh-keyscan -H www.coastalcommits.com >> ~/.ssh/known_hosts
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4
         with:
           node-version: 18
           cache: 'yarn'

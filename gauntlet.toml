@@ -26,7 +26,7 @@ Search TailwindCSS documentation from Gauntlet!
 [[entrypoint]]
 id = 'emojipicker-legacy'
 name = 'Emoji Picker'
-path = 'src/emojipicker-legacy.tsx'
+path = 'src/emojipicker/legacy.tsx'
 type = 'inline-view'
 description = """
 Copy emojis to your clipboard from Gauntlet!
@@ -35,7 +35,7 @@ Copy emojis to your clipboard from Gauntlet!
 [[entrypoint]]
 id = 'emojipicker'
 name = 'Emoji Picker'
-path = 'src/emojipicker.tsx'
+path = 'src/emojipicker/index.tsx'
 type = 'view'
 description = """
 Copy emojis to your clipboard from Gauntlet!
