@@ -14,7 +14,7 @@ Repository: https://www.coastalcommits.com/cswimr/cswimr-gauntlet-plugins
 id = 'tailwindcss-search-documentation'
 name = 'Search TailwindCSS Documentation'
 path = 'src/tailwindcss/src/search-documentation.tsx'
-icon = 'tailwindcss/list-icon.png'
+icon = 'tailwindcss/entrypoint-icon.png'
 type = 'view'
 description = """
 Search TailwindCSS documentation from Gauntlet!
