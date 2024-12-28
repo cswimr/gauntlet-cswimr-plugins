@@ -1,7 +1,6 @@
 import { List } from "@project-gauntlet/api/components";
 import React, { ReactElement, useState } from "react";
 import documentation from "./documentation/tailwind-css";
-import { Clipboard } from "@project-gauntlet/api/helpers";
 import open from "../../../utils/open-url";
 
 // @ts-expect-error gauntlet uses deno and not node
@@ -11,24 +10,13 @@ const denoCore: DenoCore = Deno[Deno.internal].core;
 export default function SearchDocumentation(): ReactElement {
   const [searchText, setSearchText] = useState<string | undefined>("");
 
+  //TODO - Migrate this to an Action, so that we can also have a copy to clipboard feature
   const onClick = async (url: string) => {
     await open(url);
-    //await Clipboard.writeText(url);
   };
 
   return (
-    <List
-    //   actions={
-    //     <ActionPanel>
-    //       <Action
-    //         label="Copy URL to Clipboard"
-    //         onAction={async () => {
-    //           await Clipboard.writeText(item.url);
-    //         }}
-    //       />
-    //     </ActionPanel>
-    //   }
-    >
+    <List>
       <List.SearchBar
         placeholder={"Search TailwindCSS Documentation..."}
         value={searchText}
