@@ -12,4 +12,9 @@ export default [
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   pluginPrettierRecommended,
+  {
+    rules: {
+      "prettier/prettier": "warning",
+    },
+  },
 ];
