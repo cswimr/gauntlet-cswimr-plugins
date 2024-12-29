@@ -4,20 +4,22 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { execSync } from "child_process";
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 try {
   execSync(
-    "yarn dlx tailwindcss -i ./src/tailwindcss/generator/input.css -o ./assets/tailwindcss/generated/output.css",
-    { stdio: "inherit" }
+    "yarn dlx tailwindcss -c ../../../tailwind.config.js -i ./input.css -o ../../../assets/tailwindcss/tmp/output.css",
+    {
+      cwd: __dirname,
+    }
   );
 } catch (error) {
   console.error("Error running tailwindcss: ", error);
 }
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 const file = fs.readFileSync(
-  path.join(__dirname, "../../../assets/tailwindcss/generated/output.css"),
+  path.join(__dirname, "../../../assets/tailwindcss/tmp/output.css"),
   "utf8"
 );
 

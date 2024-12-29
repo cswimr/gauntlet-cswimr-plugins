@@ -7,7 +7,7 @@
     "build": "yarn generate && gauntlet build",
     "dev": "gauntlet dev",
     "format": "eslint --fix .",
-    "generate": "node ./generate.js"
+    "generate": "node ./generate.js && rm -rf ./assets/**/tmp"
   },
   "dependencies": {
     "@project-gauntlet/api": "0.12.0",
