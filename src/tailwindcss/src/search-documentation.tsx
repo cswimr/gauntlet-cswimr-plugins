@@ -3,10 +3,6 @@ import React, { ReactElement, useState } from "react";
 import documentation from "./documentation/tailwind-css";
 import open from "../../../utils/open-url";
 
-// @ts-expect-error gauntlet uses deno and not node
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const denoCore: DenoCore = Deno[Deno.internal].core;
-
 export default function SearchDocumentation(): ReactElement {
   const [searchText, setSearchText] = useState<string | undefined>("");
 
@@ -27,7 +23,7 @@ export default function SearchDocumentation(): ReactElement {
           Object.entries(documentation).map(([_section, items]) =>
             items
               .filter((item: { title: string; url: string }) =>
-                item.title.toLowerCase().includes(searchText.toLowerCase()),
+                item.title.toLowerCase().includes(searchText.toLowerCase())
               )
               .map((item: { title: string; url: string }) => (
                 <List.Item
@@ -36,7 +32,7 @@ export default function SearchDocumentation(): ReactElement {
                   title={item.title}
                   onClick={() => onClick(item.url)}
                 />
-              )),
+              ))
           )
         : Object.entries(documentation).map(([section, items]) => (
             <List.Section key={section} title={section}>
