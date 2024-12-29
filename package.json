@@ -7,10 +7,7 @@
     "build": "yarn generate && gauntlet build",
     "dev": "gauntlet dev",
     "format": "eslint --fix .",
-    "generate": "yarn run generate:tailwindcss",
-    "generate:tailwindcss:css": "yarn dlx tailwindcss -i ./src/tailwindcss/generator/input.css -o ./assets/tailwindcss/generated/output.css",
-    "generate:tailwindcss:classes": "node ./src/tailwindcss/generator/index.js",
-    "generate:tailwindcss": "yarn run generate:tailwindcss:css && yarn run generate:tailwindcss:classes"
+    "generate": "node ./generate.js"
   },
   "dependencies": {
     "@project-gauntlet/api": "0.12.0",
