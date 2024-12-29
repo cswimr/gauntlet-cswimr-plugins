@@ -6,7 +6,10 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const file = fs.readFileSync(path.join(__dirname, "./output.css"), "utf8");
+const file = fs.readFileSync(
+  path.join(__dirname, "../../../assets/tailwindcss/generated/output.css"),
+  "utf8"
+);
 
 const json = css
   .parse(file)
@@ -29,4 +32,7 @@ const json = css
     };
   });
 
-fs.writeFileSync(path.join(__dirname, "./classes.json"), JSON.stringify(json));
+fs.writeFileSync(
+  path.join(__dirname, "../../../assets/tailwindcss/generated/classes.json"),
+  JSON.stringify(json)
+);
