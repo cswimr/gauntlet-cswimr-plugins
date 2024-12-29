@@ -12,6 +12,7 @@
     "editor.suggest.insertMode": "replace",
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "editor.formatOnSave": true,
   "eslint.format.enable": true,
   "eslint.codeActionsOnSave.mode": "problems",
   "eslint.options": {
