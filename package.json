@@ -17,7 +17,7 @@
     "@eslint/js": "9.18.0",
     "@project-gauntlet/tools": "0.9.0",
     "@types/deno": "2.0.0",
-    "@types/react": "19.0.4",
+    "@types/react": "19.0.7",
     "@types/which": "3.0.4",
     "@typescript-eslint/parser": "8.19.1",
     "eslint": "9.18.0",
