@@ -6,7 +6,7 @@ jobs:
   publish:
     name: Publish plugins
     runs-on: docker
-    container: www.coastalcommits.com/cswimr/actions:yarn@sha256:c8fa8a18165c0e6198fc3cf3e157cad1f546a3bd21b2293dbb697125ef94866c
+    container: www.coastalcommits.com/cswimr/actions:yarn@sha256:6bf6354141f3e06617eaa0aa8fc2675c488ef35c50eb5017fa6a92494f773eed
     steps:
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
