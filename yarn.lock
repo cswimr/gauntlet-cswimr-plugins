@@ -1495,10 +1495,10 @@
   resolved "https://registry.yarnpkg.com/@pothos/plugin-scope-auth/-/plugin-scope-auth-3.22.1.tgz#203b53353b295741d4760b9df35dd7683eeea134"
   integrity sha512-mkfbiS6tSYXFrxY9U5mEqSzAWDB3YoqQLTE/D7J/QghbDbkfFSiwQwYHHl0tL1FO32l69RMCdZy3Kz7MBBZG8w==
 
-"@project-gauntlet/api@0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@project-gauntlet/api/-/api-0.12.0.tgz#92c940ea3f99b46ac985d87f6329fe52049ee7b0"
-  integrity sha512-RHOyDV4D64BE33FSk8DmqjLluOQCy1Q2j7rwlTB28yNc7qTlht1T/7wFUELYaxls7LCCkGMzQkkCJ6CSXbAMZw==
+"@project-gauntlet/api@0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@project-gauntlet/api/-/api-0.14.0.tgz#b90dac56f5ca7f77da025bd41f76abcf5c52768b"
+  integrity sha512-aHmaqBm4YlAUxWtbK4XkQiTdfBgabKCH0lcyyEAN+ytXa08nEXNqMlkiNpQMUozXtibL0RQuh9Rw91YC43urvA==
 
 "@project-gauntlet/tools@0.10.0":
   version "0.10.0"
