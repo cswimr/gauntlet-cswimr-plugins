@@ -13,7 +13,7 @@ jobs:
   build:
     name: Build Plugins
     runs-on: docker
-    container: www.coastalcommits.com/cswimr/actions:yarn@sha256:2f71931631f5e407a25793ae37a18570eb5c0f8bb85862ecf651f0f9da1438d3
+    container: www.coastalcommits.com/cswimr/actions:yarn@sha256:dc73586d6d14dfd7f24a984090e1d351b4f4041fc8bfcded7571044b1b7a4ec4
     steps:
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
