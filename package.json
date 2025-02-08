@@ -14,13 +14,13 @@
     "which": "^5.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "9.19.0",
+    "@eslint/js": "9.20.0",
     "@project-gauntlet/tools": "0.10.0",
     "@types/deno": "2.0.0",
     "@types/react": "19.0.8",
     "@types/which": "3.0.4",
     "@typescript-eslint/parser": "8.23.0",
-    "eslint": "9.19.0",
+    "eslint": "9.20.0",
     "eslint-config-prettier": "10.0.1",
     "eslint-plugin-prettier": "5.2.3",
     "eslint-plugin-react": "7.37.4",
