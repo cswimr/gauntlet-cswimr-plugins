@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - name: Set up SSH key
-        uses: ssh-agent-fork@v9.0.1
+        uses: ssh-agent-fork@v0.9.1
         with:
           ssh-private-key: ${{ secrets.DEPLOY_KEY }}
           instance-urls: "c.csw.im"
