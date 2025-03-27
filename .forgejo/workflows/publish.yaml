@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - name: Set up SSH key
-        uses: actions/ssh-agent@forgejo
+        uses: ssh-agent-fork@tag-forgejo
         with:
           ssh-private-key: ${{ secrets.DEPLOY_KEY }}
           instance-urls: "www.coastalcommits.com"
