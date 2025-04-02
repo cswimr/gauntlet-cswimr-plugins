@@ -1879,10 +1879,10 @@
   dependencies:
     undici-types "~6.20.0"
 
-"@types/react@19.0.12":
-  version "19.0.12"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.0.12.tgz#338b3f7854adbb784be454b3a83053127af96bd3"
-  integrity sha512-V6Ar115dBDrjbtXSrS+/Oruobc+qVbbUxDFC1RSbRqLt5SYvxxyIDrSC85RWml54g+jfNeEMZhEj7wW07ONQhA==
+"@types/react@19.0.13":
+  version "19.0.13"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.0.13.tgz#8cbd011d0c710c2d8df35c2167860d0caa1dafc6"
+  integrity sha512-F/kzAZ/9J2tx3mSLoOIXt7d7Vd527qLTddWA4JyZVTTyKGpNUjVx4AY8DHD/gISnmFGZ4D3SEtlo5WKDUztUvw==
   dependencies:
     csstype "^3.0.2"
 
