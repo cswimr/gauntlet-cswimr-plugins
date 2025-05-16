@@ -14,7 +14,7 @@
     "which": "^5.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "9.26.0",
+    "@eslint/js": "9.27.0",
     "@project-gauntlet/tools": "0.11.0",
     "@types/deno": "2.3.0",
     "@types/react": "19.1.4",
